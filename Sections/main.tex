@@ -1,0 +1,219 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage[english]{babel} 
+
+\makeatletter
+\adddialect\l@ENGLISH\l@english
+\makeatother
+
+% ***GRAPHIC PACKAGES ***
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric,backgrounds,calc}
+\usepackage{multirow}
+%"arrows", "automata", "backgrounds", "calendar", "chains", "matrix", "mindmap", "patterns", "petri", "shadows", "shapes.geometric", "shapes.misc", "spy", "trees".
+%\usetikzlibrary{⟨list of libraries separated by commas⟩}
+
+% *** CITATION PACKAGES ***
+\usepackage{cite}
+
+% *** MATH PACKAGES ***
+\usepackage[cmex10]{amsmath}
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+% *** SPECIALIZED LIST PACKAGES ***
+\usepackage{algorithm} 
+%\usepackage{algorithmic}
+\usepackage[noend]{algpseudocode}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+
+\usepackage{ marvosym } % @ symbol \MVAt
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+
+% *** ALIGNMENT PACKAGES ***
+\usepackage{array}
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+\usepackage{mdwmath}
+\usepackage{mdwtab}
+% http://www.ctan.org/tex-archive/macros/latex/contrib/mdwtools/
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+\usepackage{eqparbox}
+% Also of notable interest is Scott Pakin's eqparbox package for creating
+% (automatically sized) equal width boxes - aka "natural width parboxes".
+% Available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/eqparbox/
+
+% *** SUB+FIGURE PACKAGES ***
+\usepackage{wrapfig}
+\usepackage{float}
+%\usepackage[tight,footnotesize]{subfigure}
+% http://www.ctan.org/tex-archive/obsolete/macros/latex/contrib/subfigure/
+% subfigure.sty has been superceeded by subfig.sty.
+
+%\usepackage[caption=false]{caption}
+\usepackage[font=footnotesize]{subfig}
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+% http://www.ctan.org/tex-archive/macros/latex/contrib/caption/
+
+% *** FLOAT PACKAGES ***
+\usepackage{fixltx2e}
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+%\usepackage{stfloats}
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+\usepackage{url}
+% http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
+% \url{my_url_here}.
+
+\usepackage{textcomp}
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+
+% correct bad hyphenation here
+\hyphenation{efficiency infra-structure electri-city}
+
+
+
+\begin{document}
+
+% can use linebreaks \\ within to get better formatting as desired
+\title{Energy Efficiency as a Orchestration Service for the Internet of Things}
+
+\author{\IEEEauthorblockN{Peramanathan Sathyamoorthy\IEEEauthorrefmark{1} and
+Edith Ngai\IEEEauthorrefmark{2}\\}
+\IEEEauthorblockA{Department of Information Technology\\
+Uppsala University, Sweden\\
+Email: \IEEEauthorrefmark{1}sathyam.peram@gmail.com, \IEEEauthorrefmark{2} http://user.it.uu.se/\texttildelow{eding810}}
+}
+
+
+% The paper headers
+%\markboth{Proceedings of SNCNW, May~2015}%
+%{Shell \MakeLowercase{\textit{et al.}}: Energy Efficiency as a Service for Internet of Things}
+
+\maketitle
+\pagestyle{empty}
+\thispagestyle{empty}
+\begin{abstract}
+\input{section/abstract.tex}
+\end{abstract}
+
+\begin{IEEEkeywords}
+IoT, Data Communications, Mobile Cloud Computing, Crowd Sourcing , Energy Efficiency, Orchestration
+\end{IEEEkeywords}
+
+\IEEEpeerreviewmaketitle
+
+\section{Introduction}
+\input{section/intro.tex}
+\section{Related Work}
+\input{section/bg.tex}
+\section{Cloud Orchestration for Energy Efficiency}
+\input{section/Orch.tex}
+\section{Preliminary investigations}
+\input{section/preinvres.tex}
+\section{Conclusion}
+\input{section/conclusion.tex}
+
+%\appendices
+%\section{Trepn Profiler for Eclipse}
+%
+
+% use section* for acknowledgement
+\section*{Acknowledgment}
+We would like to thank our reviewers for their valuable comments and the work is supported by the project with Ericsson through SSF Mobility grant.
+
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+\begin{thebibliography}{9}
+\bibitem{IoT:Defn}
+J. Gubbi, R. Buyya, S. Marusic, and M. Palaniswami, “Internet of Things (IoT): A vision, architectural elements, and future directions,” Future Generation Computer Systems, vol. 29, no. 7, pp. 1645–1660, Sep. 2013.
+\bibitem{IoT:Challenge}
+J. Chase, The Evolution of the Internet of Things. Dallas, TX: Texas Instruments Incorporated, 2013.
+\bibitem{BigD:Deep}
+M. M. Najafabadi, F. Villanustre, T. M. Khoshgoftaar, N. Seliya, R. Wald, and E. Muharemagic, “Deep learning applications and challenges in big data analytics,” Journal of Big Data, vol. 2, no. 1, Feb. 2015.
+
+\bibitem{IEA:bdle}
+International Energy Agency, "More Data, Less Energy - Making Network Standby More Efficient in Billions of Connected Devices" \copyright OECD/IEA, 2014 Licence:\url{https://www.iea.org/t&c/termsandconditions/}
+
+\bibitem{EE:MCCarch}
+A. Tzanakaki, M. P. Anastasopoulos, S. Peng, B. Rofoee, Y. Yan, D. Simeonidou, G. Landi, G. Bernini, N. Ciulli, J. F. Riera, and others, “A converged network architecture for energy efficient mobile cloud computing,” in Optical Network Design and Modeling, 2014 International Conference on, 2014, pp. 120–125.
+
+\bibitem{EE:JVM}
+T. K. Kundu and K. Paul, “Improving Android Performance and Energy Efficiency,” 2011, pp. 256–261.
+
+\bibitem{EE:eTime}
+P. Shu, F. Liu, H. Jin, M. Chen, F. Wen, and Y. Qu, “eTime: energy-efficient transmission between cloud and mobile devices,” in INFOCOM, 2013 Proceedings IEEE, 2013, pp. 195–199.
+
+\bibitem{EE:Multinets}
+S. Nirjon, A. Nicoara, C.-H. Hsu, J. Singh, and J. Stankovic, “Multinets: Policy oriented real-time switching of wireless interfaces on mobile devices,” in Real-Time and Embedded Technology and Applications Symposium (RTAS), 2012 IEEE 18th, 2012, pp. 251–260.
+
+\bibitem{EE:Hier}
+J. Tang, Z. Zhou, J. Niu, and Q. Wang, “An energy efficient hierarchical clustering index tree for facilitating time-correlated region queries in the Internet of Things,” Journal of Network and Computer Applications, vol. 40, pp. 1–11, Apr. 2014.
+
+\bibitem{EE:Protocol}
+A. Venčkauskas, N. Jusas, E. Kazanavičius, and V. Štuikys, “An Energy Efficient Protocol For The Internet Of Things,” Journal of Electrical Engineering, vol. 66, no. 1, pp. 47–52, 2015.
+
+\bibitem{EE:GreenSW}
+B. Steigerwald and A. Agrawal, “Developing green software,” Intel White Paper, vol. 9, 2011.
+
+\bibitem{EE:Measure}
+A. Pathak, Y. C. Hu, and M. Zhang, “Where is the energy spent inside my app?: fine grained energy accounting on smartphones with eprof,” in Proceedings of the 7th ACM european conference on Computer Systems, 2012, pp. 29–42.
+
+\bibitem{IoTA:ARM}
+R. Beneficiary, I. M. L. FhG, S. H. SAP, E. H. HSG, C. Jardak, A. O. CEA, A. Serbanati, M. T. SAP, and J. W. Walewski, “Internet of Things-Architecture IoT-A Deliverable D1. 3–Updated reference model for IoT v1. 5.”
+\bibitem{Orches:Arch}
+A. González García, M. Alvarez Alvarez, J. Pascual Espada, O. Sanjuán Martínez, J. M. Cueva Lovelle, and C. Pelayo G-Bustelo, “Introduction to Devices Orchestration in Internet of Things Using SBPMN,” International Journal of Interactive Multimedia and Artificial Intelligence, vol. 1, no. 4, p. 16, 2011.
+
+\bibitem{IoT:Survey}
+L. Atzori, A. Iera, and G. Morabito, “The Internet of Things: A survey,” Computer Networks, vol. 54, no. 15, pp. 2787–2805, Oct. 2010.
+\bibitem{IoT:Arch}
+H. Suo, J. Wan, C. Zou, and J. Liu, “Security in the Internet of Things: A Review,” 2012, pp. 648–651.
+\bibitem{EModel}
+A. Pathak, Y. C. Hu, M. Zhang, P. Bahl, and Y.-M. Wang, “Fine-grained power modeling for smartphones using system call tracing,” in Proceedings of the sixth conference on Computer systems, 2011, pp. 153–168.
+\bibitem{trepn}
+Qualcomm Technologies, Inc. "Trepn Profiler" \url{https://developer.qualcomm.com/mobile-development/increase-app-performance/trepn-profiler}, Apr. 15, 2015.
+
+\end{thebibliography}
+
+% that's all folks
+\end{document}
+
+
+%%%%% Additional Bibs %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Open probs and energy minimization
+%\bibitem{EE:Eaware}
+%B. L. A. BLA and L. A. BLA, “Fine-Grained Application Analysis for Energy-Aware Computing,” 2011.
+%
+%\bibitem{EE:RedunData}
+%B. Fateh and M. Govindarasu, “Energy minimization by exploiting data redundancy in real-time wireless sensor networks,” Ad Hoc Networks, vol. 11, no. 6, pp. 1715–1731, Aug. 2013.
+%\bibitem{EE:Diagnosis}
+%A. J. Oliner, A. P. Iyer, I. Stoica, E. Lagerspetz, and S. Tarkoma, “Carat: collaborative energy diagnosis for mobile devices,” 2013, pp. 1–14.
+%
+%\bibitem{OpenProbs}
+%T. Locher, P. Von Rickenbach, and R. Wattenhofer, “Sensor networks continue to puzzle: Selected open problems,” in Distributed Computing and Networking, Springer, 2008, pp. 25–38.
+
+
+% Architecture level Energy Efficiency
+%\bibitem{EE:Comm}
+%S. T. Kouyoumdjieva, O. Helgason, E. A. Yavuz, and G. Karlsson, “Evaluating an energy-efficient radio architecture for opportunistic communication,” in Communications (ICC), 2012 IEEE International Conference on, 2012, pp. 5751–5756.
+
+% Energy Measure
+
+%\bibitem{EE:Prog}
+%S. Hao, D. Li, W. G. Halfond, and R. Govindan, “Estimating mobile application energy consumption using program analysis,” in Software Engineering (ICSE), 2013 35th International Conference on, 2013, pp. 92–101.
+%
+%\bibitem{EE:MeasureWiFi}
+%A. Rice and S. Hay, “Measuring mobile phone energy consumption for 802.11 wireless networking,” Pervasive and Mobile Computing, vol. 6, no. 6, pp. 593–606, Dec. 2010.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
