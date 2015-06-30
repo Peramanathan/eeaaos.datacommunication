@@ -55,6 +55,7 @@
 \usepackage{tabularx}
 
 % *** SUB+FIGURE PACKAGES ***
+\usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{float}
 %\usepackage[tight,footnotesize]{subfigure}
@@ -77,10 +78,29 @@
 % http://www.ctan.org/tex-archive/macros/latex/contrib/misc/
 % \url{my_url_here}.
 
+%\usepackage{epigraph}
+%\epigraphfontsize{\small\itshape}
+%\setlength\epigraphwidth{8cm}
+%\setlength\epigraphrule{0.5pt}
+
+\makeatletter
+\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+{\setlength{\@tempdima}{#1}%
+	\def\chapquote@author{#2}%
+	\parshape 1 \@tempdima \dimexpr\textwidth-1\@tempdima\relax%
+	\itshape}
+{\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
 \usepackage{textcomp}
 
 % Document links and bookmarks
 \usepackage{hyperref} 
+
+%bib latin-1 inputenc problem
+%\usepackage[latin1]{inputenc}
+%\usepackage[bibencoding=utf8]{biblatex}
 
 % Numbering of headings down to the subsection level
 \numberingdepth{subsection}
@@ -97,22 +117,30 @@
 }
 
 
+
+
+
 \begin{document}
 
+
+
 \frontmatter
+
     % Creates the front matter (title page(s), abstract, list of papers)
     % for either a Comprehensive Summary or a Monograph.
     % Authors of Comprehensive Summaries use this front matter 
     \frontmatterCS 
     % Monograph authors use this front matter 
     %\frontmatterMonograph 
- 
+    \chapter*{Acknowledgement}
+    I thank my supervisor Edith Ngai for her support and for helping me out whenever I have doubts. With the freedom she gave I have excelled and mastered many new skills.
+    \addcontentsline{toc}{section}{Acknowledgement}
    % Optional dedication
-   \dedication{Dedicated to \\ The eyes: Wife and Mom \\ The shoulders: Dad and Father-in-law \\  My brother Thileepan \\ Two little stars : Charu Nethra Priyanga \\ \& \\ To all my great supporting friends }
+   \dedication{Dedicated to \\ \ \\  The eyes: \textbf{Wife and Mom} \\ The shoulders: \textbf{Dad and Father-in-law} \\  The arms: \textbf{Brothers and Sisters} \\ Two little stars : \textbf{Charu Nethra , Priyanga} \\ The 'indeed-in-needs' : All my great \textbf{Friends} \\ \& \\ The precious rarities: Motivating \textbf{Relatives} }
  
     % Environment used to create a list of papers
     \begin{listofpapers}
-    	\item A Paper Discussed in this Thesis \label{apaperlabel}
+    	\item P. Sathyamoorthy , E.H. Ngai. Energy Efficiency as a Orchestration Service for the Internet of Things. In S. Forsstrom and M. Jacobsson, chairs, \emph{Proceedings of SNCNW 2015, the 11th Swedish National Computer Networking Workshop}, pages 41-44. SNCNW 2015. \label{apaperlabel}
     \end{listofpapers}
     
     
@@ -124,15 +152,19 @@
     \endgroup
     
     % Optional tables
-    %\listoftables
-    %\listoffigures
+    \listoftables
+    \listoffigures
 
 \mainmatter
     % This includes the "Instruction", "Problem and Solutions" and "Example" files. After reading it, remove it from Thesis.tex. 
+   
     \input{Sections/intro.tex}
     \input{Sections/bg.tex}
-    \input{Sections/Orch.tex}
-    \input{Sections/preinvres.tex}
+    \input{Sections/method.tex}
+    \input{Sections/results.tex}
+    \input{Sections/conclusion.tex}
+   % \input{Sections/Orch.tex}
+   % \input{Sections/preinvres.tex}
     %\input{Example/ProblemsAndSolutions}
     %\input{Example/Example.tex}
     
@@ -142,10 +174,14 @@
 
 \backmatter
     % References
+    \begin{thebibliography}{9}    
+    	\input{Sections/refs.tex}
+    \end{thebibliography}
+    
     % No restriction is set to the reference styles
     % Save your references in References.bib
-    \nocite{*} % Remove this for your own citations
-    \bibliographystyle{plain}
-    \bibliography{References}
+    %\nocite{*} % Remove this for your own citations
+    %\bibliographystyle{plain}
+    %\bibliography{References}
 
 \end{document}

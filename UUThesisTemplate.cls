@@ -994,7 +994,7 @@
 
 \providecommand{\listofpapersintro}[1]{\gdef\@listofpapersintro{#1}}
 \providecommand{\listofpapersoutro}[1]{\gdef\@listofpapersoutro{#1}}
-\listofpapersintro{This thesis is based on the following papers, which are referred to in the text by their roman numerals.}% 
+\listofpapersintro{This thesis is based on the following paper, which are referred to in the text by their roman numerals.}% 
 \listofpapersoutro{Reprints were made with permission from the publishers.}
 
 
@@ -1010,7 +1010,7 @@
 \providecommand{\pgs@language@english}{%
   	\renewcommand{\bibname}{\refname}%
   	\renewcommand{\listofpapersname}{List of papers}% 
-	\listofpapersintro{This thesis is based on the following papers, which are referred to in the text by their Roman numerals.}% 
+	\listofpapersintro{This thesis is based on the following paper, which are referred to in the text by their Roman numerals.}% 
 	\listofpapersoutro{Reprints were made with permission from the publishers.}% 
 	\renewcommand{\continuednextpage}{Continued on next page}%
 	\renewcommand{\keywordsname}{Keywords}%

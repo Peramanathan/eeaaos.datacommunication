@@ -1,13 +1,13 @@
 \chapter{Results}
 % Preliminary investigation and results
-\begin{figure*}[t]
+\begin{figure}[t]
  \begin{center}
 \subfloat[Google maps\label{subfig:gmap}]{ \includegraphics[scale=0.15]{Figures/gmapgps60to80c.png}}
 \subfloat[YouTube\label{subfig:ytube}]{ \includegraphics[scale=0.15]{Figures/Youtube230c.png}}
  \end{center}
  \caption{Randomly profiled data usage patterns}
  \label{fig:TrepnDataUsage}
-\end{figure*} 
+\end{figure} 
 Smart-phone is a system-on-chip architecture with three key components  \emph{Application processor} to handle user applications, \emph{Modem processor} to handle transmission and reception and \emph{Peripheral devices(I/O)} to interact with users. In smart-phones, power consumption of any I/O component is sometime higher than the power consumption of the CPU or at the least comparable. In \cite{EModel} the problems and flaws in the power models derived from external power meters and those derived from (hardware) utilization-based well explained by considering the types of components having \textit{tail power states},  not having quantitative utilization(e.g. camera on/off) and system calls that change power states but not mean any utilization of hardware. As system calls are the only way for application can use I/O components, system call based power modelling is better one. Thus Energy profiling with all its overheads is the very important first step.
 \subsection{Power states,logging and semantic data}
 The Advanced Configuration and Power Interface(ACPI) specification has been evolving as a de-facto common hardware interfaces in Operating System-directed configuration and  Power Management(OSPM) for both devices and entire systems. When profiling either an individual application or entire platform it is useful to fetch information about the states of system, device and processors, as in table \ref{table:states}, so that better decision can be made to achieve energy efficiency. We are currently using Qualcomm's Trepn Profiler \cite{trepn}. We study the behaviours of the system and applications running in the system including CPUs usage, memory usage, data usage. 

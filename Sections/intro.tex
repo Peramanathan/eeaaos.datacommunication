@@ -6,6 +6,18 @@
 %http://whatis.techtarget.com/definition/Internet-of-Things
 %http://www.slideshare.net/IoTMethodology/a-methodology-for-building-the-internet-of-things-42112202?ref=http://www.iotmethodology.com/
 %\subsection{The Context of Interest: Smartphones}
+
+\begin{chapquote}{D. Clark,  \textit{End-To-End Arguments in System Design}, 1984}
+	``The function in question can completely and correctly be implemented only with
+	the knowledge and help of the application standing at the endpoints of the
+	communication system. Therefore, providing that questioned function as a feature
+	of the communication system itself is not possible. (Sometimes an incomplete
+	version of the function provided by the communication system may be useful as a
+	performance enhancement.)'' 
+\end{chapquote}
+
+%\epigraph{text }{source }
+
 IoT is a convergence of number of technologies such as \textit{sensors}, \textit{IPv6}, \textit{wireless communication} and  \textit{Internet}. Any real-world objects become smart just by satisfying few conditions but not limited to: 1) uniquely identifiable;  2) being able to sense or actuate; 3) being able to communicate \cite{IoT:Defn}. The growth of smart objects are posing challenges to the research community in energy management, data analytics and security \cite{IoT:Challenge}. Among these challenges, security and privacy issues are not just issues in technical system design level, but also in ethical, behavioural and policies level. We have powerful analytical tools available with advanced data analysis algorithms \cite{BigD:Deep}. On the other hand, energy management is more complex and chaotic, that is our focus of this paper. 
 
 %\subsection{Energy Efficiency: The Ins and Outs}
@@ -15,5 +27,37 @@ Berkeley National Laboratory defined energy efficiency as using less energy to p
 Hereafter we narrow our focus on smart-phones which are increasing in exponential order over the years. Modern smart-phones provide heterogeneous functionalities including a number of sensors. They are one of the most representative and popular smart objects in the IoT. As smart-phones are resource constraint with respect to memory and computation, they happen to off-load computation and access remote storage on the cloud servers via network. Cloud computing in the IoT leads to thousands of cloud supported applications and it is growing steeply. As a consequence, smart-phones are consuming a lot of energy for communication with the cloud. Due to the size limitation, effort of making powerful batteries is not able to withstand the energy hungriness persist in the smart-phones. It is important to reduce energy consumption when developing new kind of applications.
 
 Smart-phones are usually running multiple applications with different operations at the same time. It is very difficult to understand and identify the cause of high energy consumption in this asynchronous power consuming environment. It is necessary to provide profiling of power consumption in at different levels, such as whole system, individual applications, and system calls in operation level. In this paper, we propose the first iterative novel solution using \textit{Cloud Orchestration} for power management on smart-phones. Cloud orchestration aggregates power profiling data from the smart-phones and coordinates data storage, data analysis, learning and decision making. From the profiling data, the orchestrator learns mainly the power consumption behaviours and the usage pattern of the participating smart-phones. The orchestrator aims for providing overall system power management rather than making part of the system efficient. 
+
+{\bf Structure of the chapter.} In this chapter, we first elucidate the ambiguity of the term \emph{energy efficiency} (see Section \ref{section:prob}) and introduce the challenges and the research questions (see Section \ref{section:rq}) that we address in this thesis. Then we discuss the delimitations of the thesis (see Section \ref{section:dlimit}) . In the final section , we give the outline of the rest of this thesis (see Section \ref{section:outln}). 
+\section{Energy Efficiency}
+\label{section:prob}
+The term \emph{energy efficiency} is referred to the way of achieving more services for the same amount of energy, or the same services for less amount of energy, until otherwise specified. Thus the thesis focuses on \textit{efficient energy usage} rather than \textit{energy conversion energy} and \emph{energy conservation} which are commonly confused with energy efficiency. 
+Energy conversion efficiency is the ratio between  the useful output of an energy conversion system and the input, in energy terms. Energy conservation refers to reducing energy consumption through using less of an energy service.
+
+Energy efficient communication is only considered as a  constituting disciplinary of \emph{green communications}. However, greenness and optimization of end-to-end communication flow, computing,  the involved intermediate hardwares and other components are overwhelming scopes for this thesis.  We are more towards energy efficiency as software engineering, designed and architect  from data-driven intelligence and thus heavily limited to smart devices(users) and the applications. We also want the architecture to be flexible, adaptable and comprehend to future changes  or optimizations in network layers. Thus by not compromising the improvements made out of domain knowledge.\\
+ 
+
+\section{Research Questions}
+\label{section:rq}
+In this section, we elaborate the challenges 
+
+\subsection{Q1: Domain Knowledge} 
+Do we have enough domain knowledge to provide a outstanding energy efficient data communications? What are the other factors worth considering ? Why?
+
+\subsection{Q2: Cloud Solutions}
+Big data, large scale cloud computing and services, crowd sourcing are new concepts that are aiming to boost data-driven intelligence and insights building. How to integrate these concepts to design a architecture for energy efficiency?
+
+\subsection{Q3: Self Efficiency}
+How to ensure the solution for energy efficiency is self energy efficient, i.e., energy consumed by the solution method < the energy it saved ?
+
+
+%When the architecture, protocols , 
+%Question 1: Energy efficiency is really needed?
+%Question 2: Does the energy problem breakable into small independent problems?
+%Question 3: Does the proposed solution is self energy-efficient?
+\section{Delimitations}
+\label{section:dlimit}
+\section{Outline}
+\label{section:outln}
 
 
