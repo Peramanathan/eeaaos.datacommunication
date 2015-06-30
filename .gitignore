@@ -1,0 +1,15 @@
+# Compiled source #
+###################
+*.aux
+*.lof
+*.lot
+*.out
+*.toc
+
+# Packages #
+############
+*.gz
+
+# Logs #
+########
+*.log
